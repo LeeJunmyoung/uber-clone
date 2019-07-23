@@ -1,1 +1,2 @@
 # uber-clone
+typescript + node 
