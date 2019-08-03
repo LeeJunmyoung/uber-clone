@@ -1,6 +1,7 @@
-import { BaseEntity, Entity, Column, CreateDateColumn, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
+import { BaseEntity, Entity, CreateDateColumn, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 
 import Message from './Message';
+import User from './User';
 
 @Entity()
 class Chat extends BaseEntity {
@@ -8,7 +9,10 @@ class Chat extends BaseEntity {
     id: number;
 
     @OneToMany(type => Message, message => message.chat )
-    message: Message[];
+    messages: Message[];
+
+    @OneToMany(Type => User, user => user.chat)
+    participants: User[];
 
     @CreateDateColumn()
     createdAt: string;
