@@ -2,9 +2,6 @@ import { BaseEntity, Entity, Column, CreateDateColumn, PrimaryGeneratedColumn, B
 import { verificationTarget } from 'src/types/types';
 import User from './User';
 
-const PHONE = "PHONE";
-const EMAIL = "EMAIL";
-
 @Entity()
 class Verification extends BaseEntity {
     @PrimaryGeneratedColumn()
@@ -32,9 +29,9 @@ class Verification extends BaseEntity {
 
     @BeforeInsert()
     createKey(): void {
-        if(this.target === PHONE){
+        if(this.target === 'PHONE'){
             this.key = Math.floor(Math.random() * 100000).toString();
-        } else if(this.target === EMAIL) {
+        } else if(this.target === 'EMAIL') {
             this.key = Math.random().toString(36).substring(2);
         }
     }
