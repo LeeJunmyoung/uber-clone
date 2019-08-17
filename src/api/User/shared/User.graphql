@@ -16,6 +16,7 @@ type User {
     isTaken: Boolean!
     lastLng: Float
     lastLat: Float
+    fbId: String
     lastOrientation: Float
     chat: Chat
     messages: [Message]
