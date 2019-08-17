@@ -13,9 +13,9 @@ class User extends BaseEntity {
     @PrimaryGeneratedColumn() 
     id: number;
 
-    @Column({type:"text", unique: true}) 
+    @Column({type:"text", nullable: true}) 
     @IsEmail()
-    email: string;
+    email: string | null;
 
     @Column({type:"boolean", default:false})
     verifiedEmail: boolean;
@@ -39,7 +39,7 @@ class User extends BaseEntity {
     verifiedPhonenNumber: boolean;
 
     @Column({type:"text"})
-    profilePhotho: string;
+    profilePhoto: string;
     
     @ManyToOne(type => Chat, chat=> chat.participants)
     chat: Chat;
