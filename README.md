@@ -6,7 +6,7 @@ typescript + node + graphql
 ### Public Resolvers
 
 - [ ] Sign in /Sign up with Facebook
-- [ ] Sign In with Email
+- [x] Sign In with Email
 - [ ] Starts Phone number verification
 - [ ] Complete Phone Number Verification
 - [ ] Sign up with Email
@@ -14,6 +14,8 @@ typescript + node + graphql
 
 ### Private Resolvers
 
+- [ ] Generate JWT
+- [ ] Verifiy JWT
 - [ ] Verify email
 - [ ] Get my profile
 - [ ] Update my profile
