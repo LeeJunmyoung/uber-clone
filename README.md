@@ -5,7 +5,7 @@ typescript + node + graphql
 
 ### Public Resolvers
 
-- [ ] Sign in /Sign up with Facebook
+- [x] Sign in /Sign up with Facebook
 - [x] Sign In with Email
 - [ ] Starts Phone number verification
 - [ ] Complete Phone Number Verification
